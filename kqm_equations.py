@@ -11,14 +11,19 @@ def main():
             print("Input not valid, delta is not < 0.")
         else:
             break
+    if a < 0:
+        a = -a
+        b = -b
+        c = -c
+    k = math.sqrt(a) #k = a^(1/2)
+    q = b/(2*k)
+    m = c - math.pow(q,2)
+    print("k = a^(1/2),\tq = b/(2*a^(1/2)),\tm = c - (b/(2*a^(1/2)))^2")
+    print(f"k = {format(k, '.2f')}\tq = {format(q, '.2f')}\tm = {format(m, '.2f')}")
     if a > 0:
-        k = math.sqrt(a) #k = a^(1/2)
-        q = b/(2*k)
-        m = c - math.pow(q,2)
-        print("k = a^(1/2),\tq = b/(2*a^(1/2)),\tm = c - (b/(2*a^(1/2)))^2")
-        print(f"k = {format(k, '.2f')}\tq = {format(q, '.2f')}\tm = {format(m, '.2f')}")
         print("result -> (kx+q)^2 + m")
     else: # a < 0
-
+        print("result -> -[(kx+q)^2 + m]")   
+          
 if __name__ == "__main__":
     main()
