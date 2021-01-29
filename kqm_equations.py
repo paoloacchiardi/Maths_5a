@@ -19,7 +19,6 @@ def main():
         print(f"k = {format(k, '.2f')}\tq = {format(q, '.2f')}\tm = {format(m, '.2f')}")
         print("result -> (kx+q)^2 + m")
     else: # a < 0
-        
 
 if __name__ == "__main__":
     main()
